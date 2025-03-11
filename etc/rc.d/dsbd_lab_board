@@ -13,8 +13,8 @@ rcvar="dsbd_lab_board_enable"
 start_cmd="dsbd_lab_board_start"
 
 host_cpu=$(uname -m | grep -Eo "arm64|riscv")
-host_architecture=$(uname -p | grep -Eo "aarch64c|riscv64c") || \
-    echo "Detected that the host is not a capability machine"; exit 1
+host_architecture=$(uname -p | grep -Eo "aarch64c|riscv64c" || \
+    echo "Detected that the host is not a capability machine"; exit 1)
 safe_isa_path="$host_cpu-$host_architecture"
 base_url="https://download.cheribsd.org/releases/$host_cpu/$host_architecture"
 
