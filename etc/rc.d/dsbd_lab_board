@@ -24,7 +24,7 @@ configure_env() {
     export HOST_ID="${HOST_ID:-0}"
     export HOST_INTERFACE="${HOST_INTERFACE:-re0}"
     export RUNNER_PREFIX="${RUNNER_PREFIX:-dsbd-remote-lab}"
-    export RC_VERSION="${RC_VERSION:-1.0.3}"
+    export RC_VERSION="${RC_VERSION:-1.1.0}"
 }
 
 configure_zfs() {
