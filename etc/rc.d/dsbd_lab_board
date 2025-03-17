@@ -25,7 +25,7 @@ configure_env() {
     export HOST_INTERFACE="${HOST_INTERFACE:-re0}"
     export RUNNER_PREFIX="${RUNNER_PREFIX:-dsbd-remote-lab}"
     export CHERIBSD_VERSION="${CHERIBSD_VERSION}"
-    export RC_VERSION="${RC_VERSION:-1.2.0}"
+    export RC_VERSION="${RC_VERSION:-1.2.1}"
 }
 
 configure_zfs() {
