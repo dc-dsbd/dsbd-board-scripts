@@ -52,10 +52,10 @@ get_manifests() {
 }
 
 configure_pot() {
-    if [ -z "$(ls -A "$HOME/pot")" ]; then
+    if [ -z "$(ls -A "$HOME/dsbd-pot")" ]; then
         git -C "$HOME" clone "https://github.com/dc-dsbd/dsbd-pot" --no-progress
     fi
-    cd "$HOME/pot" || exit
+    cd "$HOME/dsbd-pot" || exit
 
     # Copy to /usr/local64 for the hybrid ABI port
     for dir in bin etc share; do
@@ -138,10 +138,10 @@ generate_pair() {
 }
 
 configure_act() {
-    if [ -z "$(ls -A "$HOME/act-pot-cheribsd")" ]; then
+    if [ -z "$(ls -A "$HOME/dsbd-act")" ]; then
         git -C "$HOME" clone "https://github.com/dc-dsbd/dsbd-act" --no-progress
     fi
-    cd "$HOME/act-pot-cheribsd" || exit
+    cd "$HOME/dsbd-act" || exit
     # Install runner scripts/flavours
     ./install.sh
 
