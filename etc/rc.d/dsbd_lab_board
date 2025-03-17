@@ -155,7 +155,7 @@ destroy_jails() {
     for clone in $pots; do
         pot destroy -p "$clone" -F 2>/dev/null
     done
-    rm -rdf "$HOME/act-pot-cheribsd/runners/*"
+    rm -rdf "$HOME/dsbd-act/runners/*"
 }
 
 start_runners() {
@@ -163,7 +163,7 @@ start_runners() {
     max_runners=3
 
     . "$HOME/.profile"
-    cd "$HOME/act-pot-cheribsd" || exit
+    cd "$HOME/dsbd-act" || exit
 
     while [ "$count" -lt "$max_runners" ]; do
         RUNNER_SUFFIX=$(LC_ALL=C tr -dc 'a-zA-Z0-9' < /dev/urandom | head -c 8)
